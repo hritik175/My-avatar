@@ -9,7 +9,7 @@ function App() {
     <Canvas
     camera = {{ position:[2, 0, 12.25], fov: 15}}
     style={{
-      backgroundColor: '#111a21',
+      backgroundColor: '#DCDCDC',
       width: '100vw',
       height: '100vh',
     }}>
@@ -20,7 +20,10 @@ function App() {
       <Suspense fallback={null}>
         <Model position={[0.025, -0.9, 0]}/>
       </Suspense>
-      <OrbitControls/>
+      <OrbitControls
+      enableDamping={true}
+      maxPolarAngle={Math.PI/2}
+      minDistance={5}/>
     </Canvas>
   );
 }

@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 
 
-export function Model(props) {
+function Model(props) {
   const { nodes, materials } = useGLTF('/model.glb')
   return (
     <group {...props} dispose={null}>
@@ -67,5 +67,7 @@ export function Model(props) {
     </group>
   )
 }
+
+export default Model;
 
 useGLTF.preload('/model.glb')
