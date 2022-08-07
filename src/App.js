@@ -7,7 +7,7 @@ import Model from './Model';
 function App() {
   return (
     <Canvas
-    camera = {{ position:[2, 0, 12.25], fov: 15}}
+    camera = {{ position:[2, 0, 12.25], fov: 25}}
     style={{
       backgroundColor: '#DCDCDC',
       width: '100vw',
@@ -22,7 +22,7 @@ function App() {
       </Suspense>
       <OrbitControls
       enableDamping={true}
-      maxPolarAngle={Math.PI/2}
+      // maxPolarAngle={Math.PI/2}
       minDistance={5}/>
     </Canvas>
   );
